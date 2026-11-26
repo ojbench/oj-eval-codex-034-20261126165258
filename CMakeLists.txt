@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(skip_list LANGUAGES CXX)
+add_executable(code tests/skip_list_test.cpp)
+target_include_directories(code PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_compile_features(code PRIVATE cxx_std_11)
+enable_testing()
+add_test(NAME skip_list COMMAND code)
